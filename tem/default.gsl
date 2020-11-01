@@ -1,0 +1,5 @@
+-- Run init.lua
+dofile([[P:\MyPrograms\PROFILE\Tools\gsl\init.lua]])
+
+-- Look at output
+os.execute("pause")
