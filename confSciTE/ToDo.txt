@@ -1,0 +1,12 @@
+Todo
+    ["#+Ctrl+Shift+Editor"] = function()        -- TODO: Pipe text through shell command
+    ["T+Ctrl+Editor"] = function()              -- TODO: Find TAGS
+    ["T+Ctrl+Shift+Editor"] = function()        -- TODO: Make TAGS
+    ["W+Alt+Editor"] = function()               -- TODO: List Open Buffers
+
+
+Done
+
+Can't do
+
+	Close user strips from script
