@@ -1,5 +1,5 @@
 # SciTEwithStrips
-Download of my SciTE windows setup - not for discussion here
+My SciTE installation - not for discussion here
 
 See https://groups.google.com/g/scite-interest/c/TMPwJidvZMg
 
