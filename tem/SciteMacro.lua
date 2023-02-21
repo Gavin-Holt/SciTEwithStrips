@@ -1,9 +1,0 @@
--- This is a template for Scite macro written in Lua
---  Useful additional functions include
---      scite.CurrentWord()     -- Get word under cursor without selection
---      sel()                   -- Get current selection or select word
---      ins(text)               -- Insert test
---      del()                   -- Delete selection
---      copy(text)              -- Place text on clipboard
---      paste()                 -- Insert from clipboard
---  There are also extensions to the string library for "piped" text processing
