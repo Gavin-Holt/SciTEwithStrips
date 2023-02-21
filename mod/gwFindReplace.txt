@@ -1,7 +1,0 @@
-Hi this is an old hacked version of winGrep[1], I
- use this because it embraces the command line.
-
-
-
-[1] https://tools.stefankueng.com/
-
