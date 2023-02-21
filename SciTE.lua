@@ -1282,7 +1282,8 @@ scite.KeyActions = {                    -- Keyboard Shortcuts  - Many Alt+Shift+
         local text = editor:GetSelText()
         scite.MenuCommand(IDM_CLEAROUTPUT)
         -- Try to direct output to the output window
-        assert(loadstring("do io.write = print "..text.." end"))()
+--         assert(loadstring("do io.write = print "..text.." end"))()
+        assert(loadstring(text))()
     end,
     ["=+Ctrl+Shift+Editor"] = function()        -- Lua strip @
         local LuaCache = scite.GetCache("LuaCache") or scite.DefaultLuaCache
