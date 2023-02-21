@@ -1,0 +1,476 @@
+<!DOCTYPE html><html><HEAD unselectable="on"><TITLE unselectable="on">Editable</TITLE><?XML:NAMESPACE PREFIX = "HTA" /><HTA:Application id=document.currentScript APPLICATIONNAME="MSI-BUILD" Icon="P:\MyPrograms\PROFILE\Tools\templates\default.ico" Border="No" Singleinstance="No" ShowInTaskBar="Yes" MaximizeButton="Yes" MinimizeButton="Yes" SYSMENU="Yes" scroll="Yes" VERSION="2"></HTA:Application>
+<META name=viewport content="width=device-width, initial-scale=1" unselectable="on">
+<META content=ie=edge http-equiv=x-ua-compatible unselectable="on">
+<STYLE unselectable="on">
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+}
+@media print{
+
+}
+body {
+    font-family: Century Schoolbook , Helvetica, sans-serif;
+    font-size: 18px;
+    letter-spacing:0.88px;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 4px;
+    font-size: 18px;
+    overflow: hidden;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav p,td,th,b,u {
+    padding: 8px 4px 4px 4px;
+    color: #818181;
+}
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+.sidenav table, tr, td, th {
+    line-height: 1;
+    border: 0px;
+}
+#editor {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+h1 ,h2 ,h3, p, a, code, {
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: left;
+}
+h2 {
+    font-size: 20px;
+}
+h1 {
+    font-size: 22px;
+}
+table {
+    width: 95%;
+    border-collapse: collapse;
+}
+table, td, th {
+    border:none;
+}
+tr, td {
+    line-height: 1.2;
+    text-align: left;
+    vertical-align: top;
+}
+td,th {
+    padding-left:5;
+}
+table { page-break-inside:auto }
+tr    { page-break-inside:avoid; page-break-after:auto }
+thead { display:table-header-group }
+tfoot { display:table-footer-group }
+</STYLE>
+
+<SCRIPT language=JScript type=text/jscript unselectable="on">
+<!--
+// HTAs work in quirks mode
+//  fileHandle.write(document.documentElement.innerHTML) is the whole source
+// https://keycode.info/
+function preventDefault(e){
+    if (e.preventDefault) {
+        e.preventDefault();
+    } else {
+        e.returnValue = false;
+    }
+}
+function toggleNav() {
+    if (document.getElementById("mySidenav").style.width=="260px") {
+	closeNav();
+    } else {
+	openNav();
+    }
+}
+function openNav() {
+    document.getElementById("mySidenav").style.width = "260px";
+    document.getElementById("editor").style.marginLeft = "260px";
+    document.getElementById("mySidenav").style.overflow = "scroll";
+}
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("editor").style.marginLeft= "0";
+    document.getElementById("mySidenav").style.overflow = "hidden";
+}
+function writeFile(){
+    // Deal with funny \ at work!
+    var filename = window.location.pathname
+
+    var fso, fileHandle;
+    fso = new ActiveXObject("Scripting.FileSystemObject");
+    fileHandle = fso.CreateTextFile(filename.replace(/\//,""), true);
+
+    fileHandle.write("<!DOCTYPE html>");
+    fileHandle.write("<html>");
+    fileHandle.write(document.documentElement.innerHTML);
+    fileHandle.write("</html>");
+    fileHandle.close();
+}
+function Shortcuts(e){
+    if (!e) var e = window.event;
+
+    var key = e.keyCode
+    if (e.ctrlKey)  { key = "ctrl"+key;     }
+    if (e.altKey)   { key = "alt"+key;      }
+    if (e.shiftKey) { key = "shift"+key;    }
+
+    // ESC
+    if ( key == 27) {
+        writeFile();
+        window.close();
+    }
+
+    // Shift+TAB
+    if (key == "shift9") {
+        preventDefault(e);
+        document.execCommand("outdent", true, null);
+        return false;
+    }
+
+    // TAB alone
+    if ( key == 9) {
+        preventDefault(e);
+        document.execCommand("indent", true, null);
+        return false;
+    }
+
+    // Ctrl+>
+    if ( key == "ctrl190") {
+        document.execCommand("subscript", true);
+    }
+
+    // Ctrl+<
+    if ( key == "ctrl188") {
+        document.execCommand("superscript", true);
+    }
+
+    // Ctrl+/ Try to wrap any selection***
+    if ( key == "ctrl191") {
+        document.execCommand("indent", true, null);
+        var range = document.selection.createRange();
+        if (range.pasteHTML) {
+            var code =    "<code>" + "code goes here " +  "</code>"
+            range.pasteHTML(code);
+        }
+    }
+
+    // Ctrl+\
+    if ( key == "ctrl220") {
+        document.execCommand("removeFormat", true);
+    }
+
+    // Ctrl+A - Built in
+    // Ctrl+B - Built in
+    // Ctrl+C - Built in
+
+    // Ctrl+D
+    if ( key == "ctrl68") {
+        document.execCommand("strikethrough", true);
+    }
+
+    // Ctrl+E
+    if ( key == "ctrl69") {
+		WshShell = new ActiveXObject("WScript.Shell");
+        WshShell.Run("P:/MyPrograms/EDITORS/Scite/Scite.exe " + window.location.pathname,1,true)
+        // Notepad wont resolve file://P:/MyPrograms/EDITORS/SciTE/tem/default.hta
+    }
+
+    // Ctrl+F - Built in
+    // Ctrl+G - Empty
+    // Ctrl+H - Empty
+    // Ctrl+I - Built in
+    // Ctrl+J - Empty
+    // Ctrl+K - Built in
+
+    // Ctrl+L
+    if ( key == "ctrl76") {
+        document.execCommand("insertUnorderedList", true);
+    }
+
+    // Ctrl-M
+    if ( key == "ctrl77") {
+        // Undo default action of CRLF
+        document.execCommand("Undo");
+        return false;
+    }
+
+    // Ctrl+N
+    if ( key == "ctrl78") {
+        document.execCommand("insertOrderedList", true);
+    }
+
+    // Ctrl+O - Empty
+    // Ctrl+P - Built in
+    // Ctrl+Q - Empty
+
+    // Ctrl+R
+    if ( key == "ctrl82") {
+        window.location.reload(false);
+    }
+
+    // Ctrl+S
+    if ( key == "ctrl83") {
+        writeFile();
+    }
+
+    // Ctrl+T need some css or in line styles***
+    if ( key == "ctrl84") {
+        document.execCommand("indent", true, null);
+        var range = document.selection.createRange();
+        if (range.pasteHTML) {
+            var table =    "<table>"
+            table = table +"<tr>"
+            table = table +"  <th>Company</th>"
+            table = table +"  <th>Contact</th>"
+            table = table +"  <th>Country</th>"
+            table = table +"</tr>"
+            table = table +"<tr>"
+            table = table +"  <td>Alfreds</td>"
+            table = table +"  <td>Maria</td>"
+            table = table +"  <td>Germany</td>"
+            table = table +"</tr>"
+            table = table +"<tr>"
+            table = table +"  <td>Centro</td>"
+            table = table +"  <td>Francisco</td>"
+            table = table +"  <td>Mexico</td>"
+            table = table +"</tr>"
+            table = table +"</table>"
+            range.pasteHTML(table);
+        }
+    }
+
+    // Ctrl+U - Built in
+    // Ctrl+V - Built in
+
+    // Ctrl+W
+    if ( key == "ctrl87") {
+        writeFile();
+        window.close();
+    }
+
+    // Ctrl+X - Built in
+    // Ctrl+Y - Built in
+    // Ctrl+Z - Built in
+
+    // F1
+    if ( key == 112) {
+        toggleNav();
+    }
+
+    // Ctrl+0
+    if ( key == "ctrl48") {
+        document.execCommand("formatBlock", false, "<p>");
+    }
+
+    // Ctrl+1
+    if ( key == "ctrl49") {
+        document.execCommand("formatBlock", false, "<h1>");
+    }
+
+    // Ctrl+2
+    if ( key == "ctrl50") {
+        document.execCommand("formatBlock", false, "<h2>");
+    }
+
+    // Ctrl+3
+    if ( key == "ctrl51") {
+        document.execCommand("formatBlock", false, "<h3>");
+    }
+
+}
+
+// Try to stop focus outside my div
+for (i=0; i<document.all.length; i++){
+    //ensure that all document elements except the content editable DIV are unselectable
+    document.all(i).unselectable = "on";
+}
+
+// Change title
+var filename = window.location.pathname
+document.title = " ContentEditor - " + filename.replace(/\//,"")
+
+// Focus on the editable section
+window.location.hash = '#editor';
+
+//-->
+</SCRIPT>
+</HEAD>
+<BODY tabIndex=-1>
+<DIV tabIndex=-1 id=mySidenav class=sidenav style="OVERFLOW: hidden; WIDTH: 0px" unselectable="on"><U><B>Help</B></U>
+<TABLE>
+<TBODY>
+<TR>
+<TD>ESC </TD>
+<TD>Save + exit</TD></TR>
+<TR>
+<TD>TAB </TD>
+<TD>Indent</TD></TR>
+<TR>
+<TD>Shift+TA</TD>
+<TD>Outdent</TD></TR>
+<TR>
+<TD>Ctrl+A </TD>
+<TD>Select All</TD></TR>
+<TR>
+<TD>Ctrl+B </TD>
+<TD>Bold</TD></TR>
+<TR>
+<TD>Ctrl+C </TD>
+<TD>Copy</TD></TR>
+<TR>
+<TD>Ctrl+D </TD>
+<TD>Strikeout</TD></TR>
+<TR>
+<TD>Ctrl+E </TD>
+<TD>Edit page</TD></TR>
+<TR>
+<TD>Ctrl+F </TD>
+<TD>Find</TD></TR>
+<TR>
+<TD>Ctrl+I </TD>
+<TD>Italic</TD></TR>
+<TR>
+<TD>Ctrl+K </TD>
+<TD>Hyperlink</TD></TR>
+<TR>
+<TD>Ctrl+L </TD>
+<TD>Bullet list</TD></TR>
+<TR>
+<TD>Ctrl+N </TD>
+<TD>Num list</TD></TR>
+<TR>
+<TD>Ctrl+P </TD>
+<TD>Print</TD></TR>
+<TR>
+<TD>Ctrl+R </TD>
+<TD>Revert</TD></TR>
+<TR>
+<TD>Ctrl+S </TD>
+<TD>Save</TD></TR>
+<TR>
+<TD>Ctrl+T </TD>
+<TD>Insert table</TD></TR>
+<TR>
+<TD>Ctrl+U </TD>
+<TD>Underline</TD></TR>
+<TR>
+<TD>Ctrl+V </TD>
+<TD>Paste</TD></TR>
+<TR>
+<TD>Ctrl+W </TD>
+<TD>Save + exit</TD></TR>
+<TR>
+<TD>Ctrl+X </TD>
+<TD>Cut</TD></TR>
+<TR>
+<TD>Ctrl+Y </TD>
+<TD>Redo</TD></TR>
+<TR>
+<TD>Ctrl+Z </TD>
+<TD>Undo</TD></TR>
+<TR>
+<TD>Ctrl+/ </TD>
+<TD>Code</TD></TR>
+<TR>
+<TD>Ctrl+&lt; </TD>
+<TD>Superscript</TD></TR>
+<TR>
+<TD>Ctrl+&gt; </TD>
+<TD>Subscript</TD></TR>
+<TR>
+<TD>Ctrl+\\ </TD>
+<TD>Unformat</TD></TR>
+<TR>
+<TD>Ctrl+Del </TD>
+<TD>Del EOW</TD></TR>
+<TR>
+<TD>Ctrl+Bksp </TD>
+<TD>Del BOW</TD></TR>
+<TR>
+<TD>Ctrl+n </TD>
+<TD>Heading 1-3</TD></TR>
+<TR>
+<TD>F1 </TD>
+<TD>Toggle Help</TD></TR></TBODY></TABLE>
+<P></P></DIV>
+<DIV spellcheck=true tabIndex=-1 onkeyup=Shortcuts() id=editor contentEditable=true onkeydown="return (event.keyCode!=9);" style="MARGIN-LEFT: 0px">
+<H1>ContentEditor</H1>
+<H2>Introduction</H2>
+<P>This is my try at an editor using HTA + ContentEditable. Many regard this technology as dated/difficult, but I am actually quite enjoying the challenge.</P>
+<P>I suppose this is more of a "file format" than an editor - as I have no method for loading text nor making a new file. New copies can be made using the file system. There is no menu system or command mode, all functions are accessed via keyboard shortcuts - with the exception of the default control and context menus.</P>
+<H2>Implementation </H2>
+<P>So after many years of contemplation I now have a self-editing document in HTML format, to which I can add any amount of customisation. The <EM>"bare bones"</EM> of this application consist of a few JavaScript functions:</P>
+<UL>
+<LI>preventDefault
+<UL>
+<LI>Used to stop the TAB key moving focus</LI></UL>
+<LI>toggleNav
+<UL>
+<LI>Used to display the help hints in a side panel - try F1</LI></UL>
+<LI>writeFile
+<UL>
+<LI>Write the file in such a way that it will reload</LI></UL>
+<LI>Shortcuts
+<UL>
+<LI>Process key cords to call functions </LI></UL>
+<LI>init
+<UL>
+<LI>Make all other items non-selectable (stop tabbing)
+<LI>Set title to include filename
+<LI>Set the opening focus</LI></UL></LI></UL>
+<P style="MARGIN-RIGHT: 0px" dir=ltr>The underlying richtext environment comes with many functions "baked in". Some are trivial (until you don't have them!) and some are more significant:</P>
+<UL>
+<LI>Normal window sizing controls
+<LI>Text wrapping
+<LI>Normal navigation/selection with keys and mouse
+<LI>Drag and drop (beautiful in Windows 10)
+<LI>Text attritutes (bold, italic, underline, strikethrough, subscript, superscript)
+<LI>Auto-indenting
+<LI>Lists (bullets and/or numbers)
+<LI>Insert hyperlink
+<LI>Insert HTML chunks
+<LI>Paste HTML including images (as links)
+<LI>Unlimited undo/redo
+<LI>Zoom in/out with mouse Ctrl-Wheel
+<LI>Spellchecking (in Windows &gt;7)
+<LI>Print (PDF driver is useful)</LI></UL>
+<P>You have full freedom to allocated application level keyboard shorcuts, write javascript "macros" and customize the CSS - but this is best done wthin a code editor (be careful not to overwrite your original when testing, ESC = Save+Exit)</P>
+<H2>Performance</H2>
+<P>Loading is blistering, mshta.exe loads very rapidly and there is only one file read (assuming no external JS/CSS/IMG). I have measured <EM>time to fully active</EM> and for small files they are as good as for Nano.</P>
+<H2>Discussion</H2>
+<P>I find this a very pleasant way to write documents. The very limited functionality does not impose any cognative burden, and can be customised to suit your habits. There is limitless scope for extending the system - I'm sure someone could write Vim in JavaScript!</P>
+<P>I am unsure how this system would cope with a large complex template, nor do I know of any upper limit to the size/complexity of the document - use at your own risk.</P>
+<P>Kind Regards </P>
+<P>Gavin Holt </P>
+<P><IMG class=wp-image-13664 style="HEIGHT: 531px; WIDTH: 720px" alt=german-shepherd src="https://www.k9ofmine.com/wp-content/uploads/2018/07/german-shepherd.jpg" width=640 height=425 sizes="(max-width: 640px) 100vw, 640px" data-pfsrc="https://www.k9ofmine.com/wp-content/uploads/2018/07/german-shepherd.jpg" srcset="https://www.k9ofmine.com/wp-content/uploads/2018/07/german-shepherd.jpg 640w, https://www.k9ofmine.com/wp-content/uploads/2018/07/german-shepherd-300x199.jpg 300w" loading="lazy"></P>
+<P>ToDo</P>
+<OL>
+<LI>Backup/Restore
+<LI>Can we link to local images
+<LI>Tidy up CSS
+<LI>Grow tables?
+<LI>Footnotes/References</LI></OL></DIV>
+<SCRIPT type=text/javascript>
+<!--
+
+//-->
+</SCRIPT>
+</BODY></html>

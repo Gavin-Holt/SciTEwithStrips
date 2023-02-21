@@ -1,0 +1,33 @@
+!           # Shell out
+! &&pause   # Shell out and see results
+%(abc)      # references variable named abc.
+%(Com)      # Current command string
+%(D1)       # Drive of current file
+%(D1)       # Drive of current file, as typed by the user. This could have no value.
+%(EDPATH)   # /EDPATH/$
+%(OS)       # Operating system
+%(OS)       # What operating system the editor is hosted on. Possible values are:
+%(P1)       # Path of current file (no extension, name, or drive) based on the name typed by the user. This could have no value.
+%(Path)     # /path/$
+%(SH)       # Height of entire screen in characters.
+%(SH)       # Screen height
+%(SW)       # Screen width
+%(SW)       # Width of entire screen in characters.
+%(Syserr)   # contains the last errno
+%(Sysrc)    # Return code from last system command.
+%(XTG_HOME) # /XTG_HOME/$
+%*
+%1
+%2
+%3
+%a          # references variable named a.
+%C          # Contains the current column number in the current edit buffer.
+%D          # Drive of current file, based on the actual path.
+%E          # File name extension of current file.
+%F          # Current file name (including name and extension).
+%H          # Home directory of a file. This is the directory where the edit command was issued.
+%M          # Modified status of the current file - set to 1 if the file has been modified, and a 0 otherwise.
+%N          # Name of the current file, extension removed.
+%P          # Path of current file (no extension, name, or drive) based on the actual full path to the file.
+%R          # Contains the current row (line number) in the current edit buffer.
+%D%P%N%E 	# make %(fullpathname)

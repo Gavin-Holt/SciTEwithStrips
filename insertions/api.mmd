@@ -1,0 +1,35 @@
+Title: This is markdown!
+*text*  -- Italic
+**text** -- Bold
+***text*** -- Bold Italic
+`text` -- Inline Code
+^text^ -- Superscript (also EOL terminated) e.g. E=mc^2
+~text~ -- Subscript (also EOL terminated) e.g. C~14
+<http://text> -- Clickable url e.g. <http://fletcherpenney.net/mmd>
+[%text] -- Variable defined in metadata e.g. Title: [%Title]
+[#text] -- In line Citation e.g. [#John Doe. *A Totally Fake Book*.  Vanity Press, 2006.]
+[^text] -- In line Footnote e.g. [^John Doe. *A Totally Fake Book*.  Vanity Press, 2006.]
+[?(term) text]  -- In line Glossary e.g. [?(Autoindent) Return replicates preceding line indent]
+[link] -- Internal link [link] e.g. [InLine]
+[text](url) -- External link e.g. [MMD](https://fletcher.github.io/MultiMarkdown-6/)
+[text][id] -- External link via id e.g. [id]: https://fletcher.github.io/MultiMarkdown-6/
+[id]: http://fletcherpenney.net/mmd
+\# text \[id\] -- Header with link id, note the space e.g. # Introduction [Chapter1Intro]
+--- -- Horizontal rule
+[id]: -- Define variable to use in image, link definitions
+[--]: Some text -- Line comment abusing the id definition process
+[>]: -- Define abbreviation for roll-over display e.g. HTML
+[>HTML]:Hypertext Markup Language
+```{{filename}}``` -- Unprocessed inclusion
+{{filename}}    -- Transclusion of filename.md
+![alt text](\path "title") -- Image e.g. ![Micro Icon](micro.jpg "Some rollover text")
+([BracketedText](URLtarget='_blank'))[^Citation] -- Handmade ref
+| :-------:| :---------:| :-----------: | :------------:| -- Table
+:(include([[test.lua]]))  -- UPP include a file before processing
+:(text) --  UPP Lua chunk
+:(read([[test.txt]])) -- My function to include file without processing
+$(text) --  UPP Lua value
+$(ref("CiteFile")) -- Generated citation
+$(include[[O:\MyProfile\lua\lua\upp\inc\Head.html]])
+$(include[[O:\MyProfile\lua\lua\upp\inc\Abbreviations.md]])
+$(include[[O:\MyProfile\lua\lua\upp\inc\Foot.html]])

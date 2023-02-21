@@ -1,0 +1,17 @@
+--Add to the paths
+package.path = package.path .. ";lua\\?.lua"
+package.cpath = package.cpath ..";cpath\\?.dll;cpath\\?51.dll"
+
+--Print them to fun
+print(package.path)
+print(package.cpath)
+
+print("\nPress [Return] to exit") 
+io.read()
+
+require 'luanet'
+luanet.load_assembly "System.Windows.Forms"
+Form = luanet.import_type "System.Windows.Forms.Form"
+form = Form()
+form.Text = "Hello, World!"
+form:ShowDialog()

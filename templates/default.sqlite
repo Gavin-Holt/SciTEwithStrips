@@ -1,0 +1,20 @@
+.load vsv
+
+CREATE virtual TABLE temp.table
+USING vsv(filename="/MyPatients/HTRACK/ProductProcDetail-GM-GHNFT-CH-ORTHO-20220225124701.csv", header=yes )
+;
+
+-- Simple select
+SELECT
+f1
+, f2
+, f3
+FROM temp.table
+WHERE [f1]="Hello"
+GROUP BY [f3]
+ORDER BY [f3] DESC
+;
+
+-- Cross Tabulation
+
+-- Data Cleaning

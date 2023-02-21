@@ -1,0 +1,34 @@
+# Pre-defined Global Variables
+#
+# %D            Drive of current file, based on the actual path.
+# %(D1)         Drive of current file, as typed by the user. This could have no value.
+# %P            Path of current file (no extension, name, or drive) based on the actual full path to the file.
+# %(P1)         Path of current file (no extension, name, or drive) based on the name typed by the user.
+# %F            Current file name (including name and extension).
+# %D%P%F        Full pathfilename
+# %N            Name of the current file, extension removed.
+# %E            File name extension of current file - with dot!
+# %H            Home directory of a file. This is the directory where the edit command was issued.
+# %M            Modified status of the current file - set to 1 if the file has been modified, and a 0 otherwise.
+# %C            Contains the current column number in the current edit buffer.
+# %R            Contains the current row (line number) in the current edit buffer.
+# %(SH)         Height of entire screen in characters.
+# %(SW)         Width of entire screen in characters.
+# %(Sysrc)      Return code from last system command.
+
+
+# OnSelLine Script Variables
+#
+# %1 			Line on screen where selection request occurred.
+# %2 			Column on screen where selection request occurred.
+# %3 			First line of selected region.
+# %4 			Last line of selected region.
+
+# OnSelWord Script Variables
+#
+# %1 			Selected word
+# %2 			LineNumber+1
+# %3 			Start Column
+# %4 			End Column
+# %5 			Length
+

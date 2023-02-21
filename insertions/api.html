@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta charset="utf-8"/>
+<link type="text/css" rel="stylesheet" href="file:///E:/MyProfile/cmd/MutliMarkdown.css"/> <script src="highlight.min.js"></script> <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+
+<h2 id="ptokens">Paired tokens</h2>
+
+<p><em>text</em> &#8211; Italic</p>
+
+<p><strong>text</strong> &#8211; Bold</p>
+
+<p><strong><em>text</em></strong> &#8211; Bold Italic</p>
+
+<p><code>text</code> &#8211; Inline Code</p>
+
+<p><sup>text</sup> &#8211; Superscript (also EOL terminated) e.g. E=mc<sup>2</sup></p>
+
+<p><sub>text</sub> &#8211; Subscript (also EOL terminated) e.g. C<sub>14</sub></p>
+
+<p><url> &#8211; Clickable url e.g. <a href="http://fletcherpenney.net/mmd">http://fletcherpenney.net/mmd</a></p>
+
+<h2 id="links">Links</h2>
+
+<p>[link] &#8211; Internal link [link] e.g. <a href="#ptokens">Ptokens</a></p>
+
+<p><a href="url">text</a> &#8211; External link e.g. <a href="https://fletcher.github.io/MultiMarkdown-6/">MMD</a></p>
+
+<p><a href="http://fletcherpenney.net/mmd">text</a> &#8211; External link via id e.g. <a href="http://fletcherpenney.net/mmd">id</a>: https://fletcher.github.io/MultiMarkdown-6/</p>
+
+<h2 id="linemarkers">Line markers</h2>
+
+<h3 id="id">text</h3>
+
+<p>&#8211; Header with link id, note the space e.g. # Introduction [Chapter1Intro]</p>
+
+<p>&#8212; &#8211; Horizontal rule (needs EOL termination)</p>
+
+<pre><code>for i,v in pairs(_G) do
+    print(i,v)
+end
+</code></pre>
+
+<blockquote>
+<p>&#8211; Blockquote
+&#8211; Not a sub level</p>
+
+<blockquote>
+<p>&#8211; Sublevel</p>
+</blockquote>
+</blockquote>
+
+<ul>
+<li>&#8211; Bullet point</li>
+<li> &#8211; Not a sub point
+
+<ul>
+<li>&#8211; Four spaces = Sub point</li>
+</ul></li>
+</ul>
+
+<ol>
+<li>Apples &#8211; Numbered list</li>
+<li>Pears
+ 2.1 Conference Pears</li>
+<li>Peaches</li>
+</ol>
+
+<h2 id="regionmarkersblanklineterminated">Region markers (blank line terminated)</h2>
+
+<p>text: &#8211; Variable defined in metadata i.e top of the file</p>
+
+<p>[>]: &#8211; Define abbreviation for rollover display e.g. Hypertext Markup Language (<abbr title="Hypertext Markup Language">HTML</abbr>)</p>
+
+<p><a href="#cn:1" id="cnref:1" title="see citation" class="citation">(1)</a> &#8211; In line Citation e.g. <a href="#cn:2" id="cnref:2" title="see citation" class="citation">(2)</a></p>
+
+<p><a href="#fn:1" id="fnref:1" title="see footnote" class="footnote"><sup>1</sup></a> &#8211; In line Footnote e.g. <a href="#fn:2" id="fnref:2" title="see footnote" class="footnote"><sup>2</sup></a></p>
+
+<p><a href="#gn:1" id="gnref:1" title="see glossary" class="glossary"></a> &#8211; In line Glossary e.g. <a href="#gn:2" id="gnref:2" title="see glossary" class="glossary">Autoindent</a></p>
+
+<h2 id="multilinemarkers">Multiline markers</h2>
+
+<pre><code class="lua">    -- fenced code block with highlighting (highlight.js)
+    for i,v in pairs(_G) do
+        print(i,v)
+    end
+</code></pre>
+
+<p>&#8211; Lua code fragment</p>
+
+<p><!---
+    Comments go here
+    Visible in source mode
+--> &#8211; Block comment (visible in source)</p>
+
+<h2 id="tables">Tables</h2>
+
+<table id="prototypetable">
+<caption style="caption-side: bottom;">Prototype table</caption>
+<colgroup>
+<col />
+<col style="text-align:center;"/>
+<col style="text-align:right;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th>    </th>
+	<th style="text-align:center;" colspan="2">   Grouping   </th>
+</tr>
+<tr>
+	<th>First Header </th>
+	<th style="text-align:center;"> Second Header </th>
+	<th style="text-align:right;"> Third Header </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>Content  </td>
+	<td style="text-align:center;" colspan="2">   <em>Long Cell</em>  </td>
+</tr>
+<tr>
+	<td>Content  </td>
+	<td style="text-align:center;"> <strong>Cell</strong> </td>
+	<td style="text-align:right;">   Cell </td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+	<td>New section </td>
+	<td style="text-align:center;">  More  </td>
+	<td style="text-align:right;">   Data </td>
+</tr>
+<tr>
+	<td>And more  </td>
+	<td style="text-align:center;" colspan="2"> With an escaped &#8216;|&#8217;   </td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="inclusions">Inclusions</h2>
+
+<p><code>{{filename}}</code> &#8211; Unprocessed inclusion</p>
+
+<p>{{filename}} &#8211; Transclusion of filename.md</p>
+
+<p><img src="\path" alt="alt text" title="title" /> &#8211; Image e.g. <img src="micro.jpg" alt="Micro Icon" title="Some rollover text" /></p>
+
+<div class="footnotes">
+<hr />
+<ol>
+
+<li id="fn:1">
+<p> <a href="#fnref:1" title="return to body" class="reversefootnote">&#160;&#8617;&#xfe0e;</a></p>
+</li>
+
+<li id="fn:2">
+<p>John Doe. <em>A Totally Fake Book</em>. Vanity Press, 2006. <a href="#fnref:2" title="return to body" class="reversefootnote">&#160;&#8617;&#xfe0e;</a></p>
+</li>
+
+</ol>
+</div>
+
+<div class="glossary">
+<hr />
+<ol>
+
+<li id="gn:1">
+: <p> <a href="#gnref:1" title="return to body" class="reverseglossary">&#160;&#8617;&#xfe0e;</a></p>
+</li>
+
+<li id="gn:2">
+Autoindent: <p>Return replicates preceding line indent <a href="#gnref:2" title="return to body" class="reverseglossary">&#160;&#8617;&#xfe0e;</a></p>
+</li>
+
+</ol>
+</div>
+
+<div class="citations">
+<hr />
+<ol>
+
+<li id="cn:1">
+<p> <a href="#cnref:1" title="return to body" class="reversecitation">&#160;&#8617;&#xfe0e;</a></p>
+</li>
+
+<li id="cn:2">
+<p>John Doe. <em>A Totally Fake Book</em>. Vanity Press, 2006. <a href="#cnref:2" title="return to body" class="reversecitation">&#160;&#8617;&#xfe0e;</a></p>
+</li>
+
+</ol>
+</div>
+
+</body>
+</html>
+

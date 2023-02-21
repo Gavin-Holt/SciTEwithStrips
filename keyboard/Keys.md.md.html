@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta charset="utf-8"/>
+<meta charset="utf-8"/> <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/> <meta http-equiv="Pragma" content="no-cache"/> <meta http-equiv="Expires" content="0"/> <link type="text/css" rel="stylesheet" href="file:///O:/MyProfile/lua/lua/html/css/normalize.css"/> <link type="text/css" rel="stylesheet" href="file:///O:/MyProfile/lua/lua/html/css/MutliMarkdown2.css"/> <script src="file:///O:/MyProfile/lua/lua/html/js/highlight.min.js"></script> <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+
+<p><title>Standard Keys</title></p>
+
+<h1 id="universalkeyboardshortcutsuks">Universal Keyboard Shortcuts (UKS)</h1>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Instead of learning and re-learning keyboard shortcuts I am &#8220;<em>on an mission</em>&#8221; to force all my editors to respond to the same keystrokes.</p>
+
+<p>This may sound a little limiting, and there are some actions I cannot achieve in some software. However, using some tricks most things are possible:</p>
+
+<ul>
+<li>Use Autohotkey to translate keyboard/mouse input for each target program.</li>
+<li>Use Reshacker to change PE executable keyboard accelerators.</li>
+<li>Use the scripting capabilities of each target program.</li>
+<li>Call external tools for some advanced actions (fzf, bat.exe, findstr, winGREP)</li>
+</ul>
+
+<h2 id="actionsandworkflow">Actions and Workflow</h2>
+
+<p>I don&#8217;t hate the mouse, but lots of clicking makes my pisiform bone hurt!</p>
+
+<p>There are several situations where a keyboard interface can avoid many clicks:</p>
+
+<ul>
+<li>Word focused actions</li>
+<li>Moving the cursor (shift to select)</li>
+<li>Move and act</li>
+<li>Searching / Navigating</li>
+<li>Jumping to next and previous</li>
+<li>Command alternatives to dialog boxes</li>
+<li>Activating options</li>
+<li>Selecting from a long list</li>
+</ul>
+
+<p>In my trials of many editors, there are some editing actions I find so useful I have adopted them.</p>
+
+<h2 id="movingthecursorshifttoselect">Moving the cursor (shift to select)</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"> Actions______________ </th>
+	<th style="text-align:left;"> Keys_________________ </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"> Move Word Left  </td>
+	<td style="text-align:left;"> Ctrl_Left    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Move Word Right  </td>
+	<td style="text-align:left;"> Ctrl_Right   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Jump Brackets   </td>
+	<td style="text-align:left;"> Ctrl_J    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> BOL     </td>
+	<td style="text-align:left;"> Ctrl_B, Home   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> EOL     </td>
+	<td style="text-align:left;"> Ctrl_E, End   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Up Line    </td>
+	<td style="text-align:left;"> Up     </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Down Line    </td>
+	<td style="text-align:left;"> Down     </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Up Full Page   </td>
+	<td style="text-align:left;"> PgUp     </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Down Full Page  </td>
+	<td style="text-align:left;"> PgDn     </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> BOF     </td>
+	<td style="text-align:left;"> Ctrl_Home    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> EOF     </td>
+	<td style="text-align:left;"> Ctrl_End    </td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="moveandact">Move and act</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"> Actions______________ </th>
+	<th style="text-align:left;"> Keys_________________ </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"> Select All   </td>
+	<td style="text-align:left;"> Ctrl_A    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Select Word   </td>
+	<td style="text-align:left;"> Ctrl_Space   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Select Word Backwards </td>
+	<td style="text-align:left;"> Ctrl_Shift_Space  </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Select Line   </td>
+	<td style="text-align:left;"> Ctrl_L    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Select Line Backwards </td>
+	<td style="text-align:left;"> Ctrl_Shift_L   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Select Inside Brackets</td>
+	<td style="text-align:left;"> Ctrl_Shift_J   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Select All Occurrences</td>
+	<td style="text-align:left;"> Ctrl_Shift_A   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Delete Word Left  </td>
+	<td style="text-align:left;"> Ctrl_Bksp    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Delete Word Right  </td>
+	<td style="text-align:left;"> Ctrl_Del    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Delete to EOL   </td>
+	<td style="text-align:left;"> Ctrl_K    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Delete to BOL   </td>
+	<td style="text-align:left;"> Ctrl_Shift_K   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Delete Line(s)  </td>
+	<td style="text-align:left;"> Ctrl_Y    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Move Line(s) Up  </td>
+	<td style="text-align:left;"> Ctrl_Shift_Up   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Move Line(s) Down  </td>
+	<td style="text-align:left;"> Ctrl_Shift_Down  </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Swap Anchor&lt;&gt;Caret </td>
+	<td style="text-align:left;"> Ctrl_Shift_T   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Duplicate Line(s)  </td>
+	<td style="text-align:left;"> Ctrl_D    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Indent Line(s)  </td>
+	<td style="text-align:left;"> Ctrl_Shift_&gt;   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Outdent Line(s)  </td>
+	<td style="text-align:left;"> Ctrl_Shift_&lt;   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Comment    </td>
+	<td style="text-align:left;"> Ctrl_Q    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> UnComment    </td>
+	<td style="text-align:left;"> Ctrl_Shift_Q   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Prefix    </td>
+	<td style="text-align:left;"> Ctrl_[    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Postfix    </td>
+	<td style="text-align:left;"> Ctrl_]    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Undo     </td>
+	<td style="text-align:left;"> Ctrl_Z    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Undoundo    </td>
+	<td style="text-align:left;"> Ctrl_Shift_Z   </td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="clipboardactions">Clipboard Actions</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"> Actions______________ </th>
+	<th style="text-align:left;"> Keys_________________ </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"> Cut     </td>
+	<td style="text-align:left;"> Ctrl_X    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> CutAppend    </td>
+	<td style="text-align:left;"> Ctrl_Shift_X   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Copy     </td>
+	<td style="text-align:left;"> Ctrl_C    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> CopyAppend   </td>
+	<td style="text-align:left;"> Ctrl_Shift_C   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Paste     </td>
+	<td style="text-align:left;"> Ctrl_V    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> PastePlain   </td>
+	<td style="text-align:left;"> Ctrl_Shift_V   </td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="searchingnavigating">Searching / Navigating</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"> Actions______________ </th>
+	<th style="text-align:left;"> Keys_________________ </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"> Find Forward   </td>
+	<td style="text-align:left;"> Ctrl_F, Alt_/   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Find Regex   </td>
+	<td style="text-align:left;"> Ctrl_/    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Find Word    </td>
+	<td style="text-align:left;"> Ctrl_*    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Mark all    </td>
+	<td style="text-align:left;"> Ctrl_M    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> UnMark all   </td>
+	<td style="text-align:left;"> Ctrl_U    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> SelSearch    </td>
+	<td style="text-align:left;"> Ctrl_Shift_F   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Find in files FZF  </td>
+	<td style="text-align:left;"> Ctrl_Alt_F   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Goto Line    </td>
+	<td style="text-align:left;"> Ctrl_G    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Goto with Filter FZF </td>
+	<td style="text-align:left;"> Ctrl_Shift_G   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Goto Stack FZF  </td>
+	<td style="text-align:left;"> Ctrl_Alt_G   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Find TAGS    </td>
+	<td style="text-align:left;"> Ctrl_T    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Make TAGS    </td>
+	<td style="text-align:left;"> Ctrl_Shift_T   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Window Peek Up  </td>
+	<td style="text-align:left;"> Ctrl_Shift_U   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Window Peek Down  </td>
+	<td style="text-align:left;"> Ctrl_Shift_D   </td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="splitingscreens-todo">Spliting Screens - TODO</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"> Actions______________ </th>
+	<th style="text-align:left;"> Keys_________________ </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"> Current Split Below </td>
+	<td style="text-align:left;"> F8     </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Current Split Right </td>
+	<td style="text-align:left;"> F7     </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> New Split Below  </td>
+	<td style="text-align:left;"> Alt_F8    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> New Split Right  </td>
+	<td style="text-align:left;"> Alt_F7    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Move to Split Down </td>
+	<td style="text-align:left;"> Alt_Down    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Move to split Up  </td>
+	<td style="text-align:left;"> Alt_Up    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Move to split Left </td>
+	<td style="text-align:left;"> Alt_Left    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Move to split Right </td>
+	<td style="text-align:left;"> Alt_Right    </td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="jumpingtonextandprevious">Jumping to next and previous</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"> Actions______________ </th>
+	<th style="text-align:left;"> Keys_________________ </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"> List Buffers   </td>
+	<td style="text-align:left;"> Alt_W     </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Next File    </td>
+	<td style="text-align:left;"> Ctrl_Tab    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Prev File    </td>
+	<td style="text-align:left;"> Ctrl_Shift_Tab  </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Next Find    </td>
+	<td style="text-align:left;"> Ctrl_Down    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Prev Find    </td>
+	<td style="text-align:left;"> Ctrl_Up    </td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="commandalternativestodialogboxes">Command alternatives to dialog boxes</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"> Actions______________ </th>
+	<th style="text-align:left;"> Keys_________________ </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"> Open File DLG   </td>
+	<td style="text-align:left;"> Ctrl_O    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Open File FZF   </td>
+	<td style="text-align:left;"> Ctrl_Alt_O   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Replace    </td>
+	<td style="text-align:left;"> Ctrl_H    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Replace All   </td>
+	<td style="text-align:left;"> Ctrl_Shift_H    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Insert Completion  </td>
+	<td style="text-align:left;"> Alt_I     </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Edit Completion  </td>
+	<td style="text-align:left;"> Alt_Shift_I   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Insert File DLG  </td>
+	<td style="text-align:left;"> Ctrl_I    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Insert File FZF  </td>
+	<td style="text-align:left;"> Ctrl_Alt_I   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Insert Snippet FZF </td>
+	<td style="text-align:left;"> Ctrl_Alt_S   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Insert Template FZF </td>
+	<td style="text-align:left;"> Ctrl_Alt_T   </td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="activatingmenuoptions">Activating menu options</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"> Actions______________ </th>
+	<th style="text-align:left;"> Keys_________________ </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"> File Open Selection </td>
+	<td style="text-align:left;"> Ctrl_Shift_O   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> File New    </td>
+	<td style="text-align:left;"> Ctrl_N    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> File Save    </td>
+	<td style="text-align:left;"> Ctrl_S    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> File Save As   </td>
+	<td style="text-align:left;"> Ctrl_Shift_S   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> File Revert   </td>
+	<td style="text-align:left;"> Ctrl_R    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> File Print   </td>
+	<td style="text-align:left;"> Ctrl_P    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> File Close   </td>
+	<td style="text-align:left;"> Ctrl_W    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> File Backup   </td>
+	<td style="text-align:left;"> Ctrl_Alt_B   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> File Versions   </td>
+	<td style="text-align:left;"> Ctrl_Alt_V   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> File Diff    </td>
+	<td style="text-align:left;"> Ctrl_Alt_D   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> File Run    </td>
+	<td style="text-align:left;"> Ctrl_Alt_R   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Toggle WordWrap  </td>
+	<td style="text-align:left;"> Ctrl_Shift_W   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Toggle Fold Section </td>
+	<td style="text-align:left;"> Alt_Z     </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Toggle Fold Children </td>
+	<td style="text-align:left;"> Alt_Shift_Z   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Toggle Fold All  </td>
+	<td style="text-align:left;"> Ctrl_Alt_Z   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Tools Shell Cmd  </td>
+	<td style="text-align:left;"> Ctrl_#                </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Tools Shell Pipe  </td>
+	<td style="text-align:left;"> Ctrl_Shift_#          </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Tools COMSPEC   </td>
+	<td style="text-align:left;"> Ctrl_Alt_#            </td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="somespecialactions">Some special actions</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"> Actions______________ </th>
+	<th style="text-align:left;"> Keys_________________ </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"> Tools Command Line </td>
+	<td style="text-align:left;"> Ctrl_:    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Tools FZF command  </td>
+	<td style="text-align:left;"> F9     </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Tools Repeat Last  </td>
+	<td style="text-align:left;"> Ctrl_.    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Spell Check Dialog </td>
+	<td style="text-align:left;"> Ctrl_F7    </td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="actionswithoutshortcuts">Actions without shortcuts</h2>
+
+<p>These functions are less often used (by me), clash with more popular actions, or are only possible with specific editors:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"> Actions______________ </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"> Exit     </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> Abandon    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ToggleCase   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> JoinAll    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ShowWhiteSpace  </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ExecuteSelection  </td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="summary">Summary</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"> Keys_________________ </th>
+	<th style="text-align:left;"> Actions______________ </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"> ^ A     </td>
+	<td style="text-align:left;"> SelectAll    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^ B     </td>
+	<td style="text-align:left;"> Home     </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^ C     </td>
+	<td style="text-align:left;"> Copy     </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^ D     </td>
+	<td style="text-align:left;"> Duplicate    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^ E     </td>
+	<td style="text-align:left;"> End     </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^ F     </td>
+	<td style="text-align:left;"> Find     </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^ G     </td>
+	<td style="text-align:left;"> Goto     </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^ H     </td>
+	<td style="text-align:left;"> Replace    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^ I     </td>
+	<td style="text-align:left;"> Insertor    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^ J     </td>
+	<td style="text-align:left;"> Jump Brace   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^ K     </td>
+	<td style="text-align:left;"> Kill to EOL   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^ L     </td>
+	<td style="text-align:left;"> SelectLine   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^ M     </td>
+	<td style="text-align:left;"> MarkAll    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^ N     </td>
+	<td style="text-align:left;"> New     </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^ O     </td>
+	<td style="text-align:left;"> Open     </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^ P     </td>
+	<td style="text-align:left;"> Print     </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^ Q     </td>
+	<td style="text-align:left;"> Comment    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^ R     </td>
+	<td style="text-align:left;"> Revert    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^ S     </td>
+	<td style="text-align:left;"> Save     </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^ T     </td>
+	<td style="text-align:left;"> FindTAGS    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^ U     </td>
+	<td style="text-align:left;"> UnmarkAll    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^ V     </td>
+	<td style="text-align:left;"> Paste     </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^ W     </td>
+	<td style="text-align:left;"> Close     </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^ X     </td>
+	<td style="text-align:left;"> Cut     </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^ Y     </td>
+	<td style="text-align:left;"> Yank     </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^ Z     </td>
+	<td style="text-align:left;"> Undo     </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+A     </td>
+	<td style="text-align:left;"> AllOccurances   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+B     </td>
+	<td style="text-align:left;"> SelectToBOL   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+C     </td>
+	<td style="text-align:left;"> CopyAppend   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+D     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+E     </td>
+	<td style="text-align:left;"> SelectToEOL   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+F     </td>
+	<td style="text-align:left;"> FindRegex    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+G     </td>
+	<td style="text-align:left;"> FilterGoto   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+H     </td>
+	<td style="text-align:left;"> ReplaceAll   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+I     </td>
+	<td style="text-align:left;"> EditInsertions  </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+J     </td>
+	<td style="text-align:left;"> SelectBrace   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+K     </td>
+	<td style="text-align:left;"> Kill to BOL   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+L     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+M     </td>
+	<td style="text-align:left;"> Indent    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+N     </td>
+	<td style="text-align:left;"> Outdent    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+O     </td>
+	<td style="text-align:left;"> OpenSelection   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+P     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+Q     </td>
+	<td style="text-align:left;"> Uncomment    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+R     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+S     </td>
+	<td style="text-align:left;"> FileSaveAs   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+T     </td>
+	<td style="text-align:left;"> SwapAnchor   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+U     </td>
+	<td style="text-align:left;"> UnselectLine   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+V     </td>
+	<td style="text-align:left;"> PastePlainText  </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+W     </td>
+	<td style="text-align:left;"> ToggleWordWrap  </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+X     </td>
+	<td style="text-align:left;"> CutAppend    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+Y     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+Z     </td>
+	<td style="text-align:left;"> UndoUndo    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!A     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!B     </td>
+	<td style="text-align:left;"> MakeBackup   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!C     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!D     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!E     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!F     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!G     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!H     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!I     </td>
+	<td style="text-align:left;"> InsertFileFzF   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!J     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!K     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!L     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!M     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!N     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!O     </td>
+	<td style="text-align:left;"> OpenFzF    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!P     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!Q     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!R     </td>
+	<td style="text-align:left;"> RunFile    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!S     </td>
+	<td style="text-align:left;"> InsertSnippetFzf  </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!T     </td>
+	<td style="text-align:left;"> InsertTemplateFzf  </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!U     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!V     </td>
+	<td style="text-align:left;"> OpenBackupFzf   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!W     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!X     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!Y     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!Z     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^&nbsp;     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^-     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^=     </td>
+	<td style="text-align:left;"> LuaEval    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^[     </td>
+	<td style="text-align:left;"> MulticursorPrefix  </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^]     </td>
+	<td style="text-align:left;"> MulticursorPostfix </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^;     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^'     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^#                    </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^,     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^.     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^/     </td>
+	<td style="text-align:left;"> FindLiteral   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+&nbsp;     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+-     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+=     </td>
+	<td style="text-align:left;"> LuaCommand   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+[     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+]     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+;     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+'     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+#                   </td>
+	<td style="text-align:left;"> TextFilter   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+,     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+.     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+/     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!-     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!=     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^![     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!]     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!;     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!'     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!#                   </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!,     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!.     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!/     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> {Esc}     </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> {Tab}     </td>
+	<td style="text-align:left;"> Indent    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> {Space}    </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> {Delete}    </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> {BackSp}    </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> {Enter}    </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> {Tab}     </td>
+	<td style="text-align:left;"> Indent    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^{Esc}    </td>
+	<td style="text-align:left;"> StartMenu    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^{Tab}    </td>
+	<td style="text-align:left;"> SwitchWindow   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^{Space}    </td>
+	<td style="text-align:left;"> SelectWord   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^+{Space}    </td>
+	<td style="text-align:left;"> SelectWordBack  </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^{Delete}    </td>
+	<td style="text-align:left;"> DeleteWordRight  </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^{BackSp}    </td>
+	<td style="text-align:left;"> DeleteWordLeft  </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^{Enter}    </td>
+	<td style="text-align:left;"> CompleteWord   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^*     </td>
+	<td style="text-align:left;"> WordSearch   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> !{Esc}    </td>
+	<td style="text-align:left;"> SwitchApp    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> !{Tab}    </td>
+	<td style="text-align:left;"> SwitchApp    </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> !{Space}    </td>
+	<td style="text-align:left;"> ControlMenu   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> !{Delete}    </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> !{BackSp}    </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> !{Enter}    </td>
+	<td style="text-align:left;"> FullScreen   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!{Esc}    </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!{Tab}    </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!{Space}    </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!{Delete}   </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!{BackSp}   </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^!{Enter}    </td>
+	<td style="text-align:left;">      </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> F1     </td>
+	<td style="text-align:left;"> Built-in Help   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> + F1     </td>
+	<td style="text-align:left;"> Load keysheet   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^ F1     </td>
+	<td style="text-align:left;"> Load helpsheet  </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> # F1     </td>
+	<td style="text-align:left;"> Run help app   </td>
+</tr>
+<tr>
+	<td style="text-align:left;"> ^ F7     </td>
+	<td style="text-align:left;"> Spellcheck   </td>
+</tr>
+</tbody>
+</table><script>document.body.contentEditable="true";</script>
+
+
+</body>
+</html>
+

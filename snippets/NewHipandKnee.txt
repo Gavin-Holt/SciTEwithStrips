@@ -1,0 +1,18 @@
+db[""] = {
+	MRN					= [[]],
+    MDT_CaseType        = [[]],
+    Name                = [[]],
+    DOB                 = [[]],
+    MDT_Consultant      = [[]],
+	PrimaryConsultant   = [[]],
+    PrimaryDate         = [[]],
+    PrimaryHosp         = [[]],
+    MDT_Date            = [[]],
+    MDT_CaseType        = [[]],
+    RevisionDate        = [[]],
+    MDT_Reviewed        = [[]],
+    MDT_History         = [[]],
+    MDT_Advice          = [[]],
+    MDT_Outcome         = [[]],
+}
+
